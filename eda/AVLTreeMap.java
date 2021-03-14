@@ -1,6 +1,6 @@
 /*
  * Released under the MIT License.
- * Copyright 2020 Oscar Vega-Gisbert.
+ * Copyright 2021 Oscar Vega-Gisbert.
  */
 package eda;
 

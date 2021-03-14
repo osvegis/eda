@@ -1,6 +1,6 @@
 # MIT License
 
-Copyright (c) 2020 Oscar Vega-Gisbert
+Copyright (c) 2021 Oscar Vega-Gisbert
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

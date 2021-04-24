@@ -121,17 +121,17 @@ private boolean hayCiclos(E e, Set<E> set)
     // 'set' contiene los nodos visitados hasta llegar a 'e'.
 
     if(!set.add(e))
-        return true;
+        return true; //.............................................RETURN
 
     for(E x : map.get(e))
     {
         if(hayCiclos(x, set))
-            return true;
-
-        // En el "ascenso" de la recursión estamos retrocediento,
-        // por tanto, acortamos el camino quitando el nodo 'x'.
-        set.remove(x);
+            return true; //.........................................RETURN
     }
+
+    // En el "ascenso" de la recursión estamos retrocediento,
+    // por tanto, acortamos el camino quitando el nodo 'e'.
+    set.remove(e);
 
     return false;
 }

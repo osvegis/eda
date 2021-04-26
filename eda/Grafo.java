@@ -54,6 +54,12 @@ public void recorridoProfundidad(E e)
 {
     Set<E> visitados = new LinkedHashSet<>();
     recorridoProfundidad(e, visitados);
+
+    // El siguiente bucle hace falta si se quiere
+    // recorrer completamente un grafo no conexo.
+    for(E x: map.keySet())
+        recorridoProfundidad(x, visitados);
+
     System.out.print("Profundidad: ");
     
     for(E v : visitados)
@@ -80,7 +86,26 @@ public void recorridoAnchura(E a)
     Set<E> visitados = new LinkedHashSet<>();
     Deque<E> cola = new ArrayDeque<>();
     cola.add(a);
+    recorridoAnchura(visitados, cola);
     
+    // El siguiente bucle hace falta si se quiere
+    // recorrer completamente un grafo no conexo.
+    for(E x: map.keySet())
+    {
+        cola.add(x);
+        recorridoAnchura(visitados, cola);
+    }
+
+    System.out.print("    Anchura: ");
+
+    for(E e : visitados)
+        System.out.print(" "+ e); 
+
+    System.out.println();
+}
+
+private void recorridoAnchura(Set<E> visitados, Deque<E> cola)
+{
     while(!cola.isEmpty())
     {
         E e = cola.poll();
@@ -91,13 +116,6 @@ public void recorridoAnchura(E a)
                 cola.add(b);
         }
     }
-    
-    System.out.print("    Anchura: ");
-
-    for(E e : visitados)
-        System.out.print(" "+ e); 
-
-    System.out.println();
 }
 
 /**

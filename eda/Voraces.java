@@ -164,7 +164,8 @@ private static class Elemento implements Comparable<Elemento>
         double beneficio1 = valor / peso,
                beneficio2 = e.valor / e.peso;
 
-        return -Double.compare(beneficio1, beneficio2);
+        // Compara para ordenar de forma descendente.
+        return Double.compare(beneficio2, beneficio1);
     }
 
     @Override public String toString()

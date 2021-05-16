@@ -6,6 +6,9 @@ package eda;
 
 import java.util.*;
 
+/**
+ * Ejemplos de algoritmos voraces.
+ */
 public class Voraces
 {
 private static int[] cambioMonedas(int[] monedas, int valor)

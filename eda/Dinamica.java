@@ -9,7 +9,6 @@ import java.math.*;
 
 /**
  * Ejemplos de algoritmos de programación dinámica.
- * @author oscar
  */
 public class Dinamica
 {

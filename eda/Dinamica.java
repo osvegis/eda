@@ -33,7 +33,7 @@ private static long fibBU(int n)
 }
 
 // Complejidad O(n)
-// Enfoque de abajo hacia arriba (Bottom-Up).
+// Enfoque de abajo hacia arriba (Top-Down).
 private static long fibTD(int n)
 {
     return fibTD(new long[n+1], n);
